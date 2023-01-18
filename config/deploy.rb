@@ -4,12 +4,12 @@ server '146.59.159.224', port: 22, roles: [:web, :app, :db], primary: true
 set :repo_url,        'git@github.com:diegomoreno576/deploy-rails.git'
 set :application,     'deploy-rails'
 
-set :rbenv_ruby,      '3.1.2'
+set :rbenv_ruby,      '3.0.0'
 # set :rbenv_ruby_dir,  '/home/ubuntu/.rbenv/versions/3.0.2'
 set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 
 # If using Digital Ocean's Ruby on Rails Marketplace framework, your username is 'rails'
-set :user,            'ubuntu'
+set :user,            'diego'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
