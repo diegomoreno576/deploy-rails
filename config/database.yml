@@ -24,6 +24,6 @@ test:
 
 production:
   <<: *default
-  database: deploy-rails
-  username: diego
-  password: root
+  database: deploy_rails
+  username: adminntc
+  password: Diego2023$$
