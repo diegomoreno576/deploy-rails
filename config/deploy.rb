@@ -5,7 +5,7 @@ set :repo_url,        'git@github.com:diegomoreno576/deploy-rails.git'
 set :application,     'deploy-rails'
 
 set :rbenv_ruby,      '3.0.0'
-# set :rbenv_ruby_dir,  '/home/ubuntu/.rbenv/versions/3.0.2'
+# set :rbenv_ruby_dir,  '/var/www/ubuntu/.rbenv/versions/3.0.2'
 set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 
 # If using Digital Ocean's Ruby on Rails Marketplace framework, your username is 'rails'
@@ -16,9 +16,9 @@ set :puma_workers,    0
 # Don't change these unless you know what you're doing
 set :pty,             true
 set :use_sudo,        false
-set :stage,           :production
+set :stage,           :development
 set :deploy_via,      :remote_cache
-set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
+set :deploy_to,       "/home#{fetch(:user)}/apps/#{fetch(:application)}"
 set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
 set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
